@@ -1,0 +1,10 @@
+name: 'Bruce v1'
+type: module
+description: 'Exposes Drupal as a JSON:API shell for BRUCE, the external AI agent.'
+core_version_requirement: ^10 || ^11
+package: Custom
+configure: bruce_v1.admin_status
+dependencies:
+  - drupal:jsonapi
+  - drupal:basic_auth
+  - drupal:path_alias

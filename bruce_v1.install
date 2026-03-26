@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Install hooks for bruce_v1.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Ensures JSON:API is set to read-write so BRUCE can create/update content.
+ */
+function bruce_v1_install(): void {
+  \Drupal::configFactory()
+    ->getEditable('jsonapi.settings')
+    ->set('read_only', FALSE)
+    ->save();
+}

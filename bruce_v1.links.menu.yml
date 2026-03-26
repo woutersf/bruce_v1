@@ -1,0 +1,6 @@
+bruce_v1.admin_status:
+  title: 'BRUCE'
+  description: 'Status and API endpoints for the BRUCE external AI agent.'
+  parent: ai.admin_settings
+  route_name: bruce_v1.admin_status
+  weight: 50

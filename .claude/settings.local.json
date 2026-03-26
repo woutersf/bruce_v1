@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -u bruce:bruce http://drupal.docker.localhost:88/api/bruce)",
+      "Bash(curl -s -u bruce:bruce http://drupal.docker.localhost:88/api/bruce/context | python3 -m json.tool 2>/dev/null | head -40)",
+      "Bash(curl -s -u bruce:bruce -H \"Accept: application/vnd.api+json\" \"http://drupal.docker.localhost:88/jsonapi/node/article?page[limit]=3&sort=-created&fields[node--article]=title,status,created\" | python3 -m json.tool 2>/dev/null | grep -E '\"title\"|\"status\"|\"created\"|\"id\"' | head -20)",
+      "Bash(curl -sv -u bruce:bruce -H \"Accept: application/vnd.api+json\" \"http://drupal.docker.localhost:88/jsonapi/node/article?page[limit]=3\" 2>&1 | grep \"< HTTP\")",
+      "Bash(curl -sv -u bruce:bruce -H \"Accept: application/vnd.api+json\" \"http://drupal.docker.localhost:88/jsonapi/node/article?page[limit]=3\" 2>&1 | grep -E \"< HTTP|Authorization|> GET\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" -u bruce:bruce -H \"Accept: application/vnd.api+json\" \"http://drupal.docker.localhost:88/jsonapi/node/article\"\necho \"\"\ncurl -s -o /dev/null -w \"%{http_code}\" \"http://drupal.docker.localhost:88/jsonapi/node/article\")"
+    ]
+  }
+}

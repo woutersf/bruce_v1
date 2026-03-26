@@ -1,0 +1,25 @@
+bruce_v1.admin_status:
+  path: '/admin/config/ai/bruce'
+  defaults:
+    _form: '\Drupal\bruce_v1\Form\BruceSettingsForm'
+    _title: 'BRUCE Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+bruce_v1.readme:
+  path: '/api/bruce'
+  defaults:
+    _controller: '\Drupal\bruce_v1\Controller\BruceController::readme'
+    _title: 'BRUCE API Guide'
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'
+
+bruce_v1.context:
+  path: '/api/bruce/context'
+  defaults:
+    _controller: '\Drupal\bruce_v1\Controller\BruceController::context'
+    _title: 'BRUCE Site Context'
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'
