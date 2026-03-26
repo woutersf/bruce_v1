@@ -1,4 +1,4 @@
-# Bruce v1
+# Bruce - Make Digital Experiences Flow
 
 Exposes a Drupal site as a JSON:API shell for **BRUCE**, an external AI agent. The module gives BRUCE everything it needs to discover the site's content model and manage content via JSON:API.
 
@@ -33,3 +33,7 @@ Exposes a Drupal site as a JSON:API shell for **BRUCE**, an external AI agent. T
 - `drupal:jsonapi`
 - `drupal:basic_auth`
 - `drupal:path_alias`
+
+---
+
+[dropsolid.ai](https://dropsolid.ai)
